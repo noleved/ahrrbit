@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AHRRLoginViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic,strong)NSArray* fieldNames;
 
+@property (nonatomic,strong)NSArray* fields;
+
+- (BOOL)saveCredential;
 
 @end

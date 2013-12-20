@@ -26,9 +26,11 @@
     // Configure the view for the selected state
 }
 
--(void)setupWithField:(NSString *)fieldname secure:(BOOL)secure
-{   self.inputField.secureTextEntry = secure;
-    self.fieldLabel.text = fieldname;
+-(void)setupWithFieldOptions:(NSDictionary *)args
+{
+
+    self.inputField.secureTextEntry = [args[@"type"] isEqualToString:@"password" ];
+    self.fieldLabel.text = args[@"name"];
     
 }
 

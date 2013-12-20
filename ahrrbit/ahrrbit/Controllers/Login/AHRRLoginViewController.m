@@ -28,7 +28,14 @@
 {
     [super viewDidLoad];
     self.title = @"Avast! Login";
-    self.fieldNames = @[@"login", @"password", @"host", @"authKey"];
+    
+    self.fields = @[
+                    @{@"name":@"email", @"type":@"text", @"value":@"", @"cell":[NSNull null]},
+                    @{@"name":@"name", @"type":@"text", @"value":[NSNull null], @"cell":[NSNull null]},
+                    @{@"name":@"password", @"type":@"password", @"value":[NSNull null], @"cell":[NSNull null]},
+                    @{@"name":@"server", @"type":@"text", @"value":[NSNull null], @"cell":[NSNull null]},
+                    @{@"name":@"token", @"type":@"text", @"value":[NSNull null], @"cell":[NSNull null]}
+                    ];
     
 }
 
@@ -42,21 +49,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.fieldNames.count;
+    return self.fields.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *valueForIndex= self.fieldNames[indexPath.row];
-    AHRRTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"text"];
-    if (nil ==  cell) {
+    
+    NSDictionary *valueForIndex = self.fields[indexPath.row];
+    AHRRTextFieldCell *cell = nil;
+    if([valueForIndex[@"cell"] isEqual:[NSNull null]])
+    {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"AHRRTextFieldCell" owner:nil options:nil] firstObject];
+        [cell setupWithFieldOptions:valueForIndex];
     }
-    
-    BOOL secure = [valueForIndex isEqualToString:@"password"];
-    
-    [cell setupWithField:valueForIndex secure:secure];
-    
+    else{
+        cell = valueForIndex[@"cell"];
+    }
     return cell;
 }
 
@@ -70,6 +78,17 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 100.0f;
+}
+
+- (void)readCredential{
+
+}
+
+- (BOOL)saveCredential{
+    for (int i = 0; i>self.fields.count; i++) {
+        NSLog(@"%@", [self.fields[i][@"getFieldValue"] getFieldValue]);
+    }
+    return YES;
 }
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
