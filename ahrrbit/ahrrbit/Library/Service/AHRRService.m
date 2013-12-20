@@ -37,9 +37,15 @@
     }];
 }
 
-- (void)addConfiguration:(AHRConfiguration *)configuration
+- (void)addConfiguration:(AHRRConfiguration *)configuration completion:(AHRRServiceEntityBlock)completion
 {
-    
+    [self.database saveObject:configuration completion:^(NSManagedObject *entity, NSError *error)
+    {
+        if (completion)
+        {
+            completion(entity, error);
+        }
+    }];
 }
 
 @end

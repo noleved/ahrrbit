@@ -27,6 +27,25 @@
     return self;
 }
 
+- (void)saveObject:(NSManagedObject *)object completion:(AHRRDatabaseEntityBlock)completion
+{    
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^
+    {
+        [object.managedObjectContext performBlock:^
+        {
+            NSError *error = nil;
+            [object.managedObjectContext save:&error];
+            
+            if (completion)
+            {
+                completion(object, error);
+            }
+        }];
+    }];
+    
+    [op start];
+}
+
 - (void)createObject:(Class)entityClass completion:(AHRRDatabaseEntityBlock)completion
 {
     __weak typeof(self) weakSelf = self;

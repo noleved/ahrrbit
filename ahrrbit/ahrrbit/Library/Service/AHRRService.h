@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AHRConfiguration.h"
+#import "AHRRConfiguration.h"
 
+typedef void(^AHRRServiceEntityBlock)(id entity, NSError *error);
 typedef void(^AHRRServiceListBlock)(NSArray *elements, NSError *error);
 
 @interface AHRRService : NSObject
@@ -19,6 +20,6 @@ typedef void(^AHRRServiceListBlock)(NSArray *elements, NSError *error);
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl modelName:(NSString *)modelName;
 
 - (void)getApplications:(AHRRServiceListBlock)completion;
-- (void)addConfiguration:(AHRConfiguration *)configuration;
+- (void)addConfiguration:(AHRRConfiguration *)configuration completion:(AHRRServiceEntityBlock)completion;
 
 @end

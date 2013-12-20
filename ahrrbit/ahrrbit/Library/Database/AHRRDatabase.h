@@ -18,6 +18,7 @@ typedef void(^AHRRDatabaseListBlock) (NSArray *elements, NSError *error);
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context;
 
+- (void)saveObject:(NSManagedObject *)object completion:(AHRRDatabaseEntityBlock)completion;
 - (void)createObject:(Class)enityClass completion:(AHRRDatabaseEntityBlock)completion;
 - (void)selectAll:(Class)entityClass completion:(AHRRDatabaseListBlock)completion;
 
