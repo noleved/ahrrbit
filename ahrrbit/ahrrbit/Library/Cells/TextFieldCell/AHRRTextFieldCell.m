@@ -27,9 +27,9 @@
 }
 
 -(void)setupWithField:(NSString *)fieldname secure:(BOOL)secure
-{   self.inputField.secureTextEntry = secure;
-    self.fieldLabel.text = fieldname;
-    
+{
+    self.inputField.secureTextEntry = secure;
+    self.inputField.placeholder = fieldname;
 }
 
 -(NSString *)getFieldValue
