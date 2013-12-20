@@ -22,6 +22,7 @@
 		56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */; };
 		56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD8118644B1800D5FCEA /* AHRRNetwork.m */; };
 		EDE24A64DB1C46C395109867 /* libPods-ahrrbit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE8320E12D14672BB130B38 /* libPods-ahrrbit.a */; };
+		F058A76F186457F20078964C /* AHRRService.m in Sources */ = {isa = PBXBuildFile; fileRef = F058A76E186457F20078964C /* AHRRService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		56EDFD8118644B1800D5FCEA /* AHRRNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRNetwork.m; sourceTree = "<group>"; };
 		5EE8320E12D14672BB130B38 /* libPods-ahrrbit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ahrrbit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahrrbit.xcconfig"; path = "../Pods/Pods-ahrrbit.xcconfig"; sourceTree = "<group>"; };
+		F058A76D186457F20078964C /* AHRRService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRService.h; sourceTree = "<group>"; };
+		F058A76E186457F20078964C /* AHRRService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,7 @@
 		56EDFD7E18644ADB00D5FCEA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				F058A76C186457D80078964C /* Service */,
 				56EDFD8318644B2D00D5FCEA /* Cells */,
 				56EDFD7F18644AEF00D5FCEA /* Network */,
 			);
@@ -222,6 +226,15 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F058A76C186457D80078964C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F058A76D186457F20078964C /* AHRRService.h */,
+				F058A76E186457F20078964C /* AHRRService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +372,7 @@
 				56EDFD6F1864450E00D5FCEA /* AHRRAppDelegate.m in Sources */,
 				56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */,
 				56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */,
+				F058A76F186457F20078964C /* AHRRService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
