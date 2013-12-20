@@ -27,6 +27,24 @@
     return self;
 }
 
+- (void)createObject:(Class)entityClass completion:(AHRRDatabaseEntityBlock)completion
+{
+    __weak typeof(self) weakSelf = self;
+    
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^
+    {
+        NSString *entityName = NSStringFromClass(entityClass);
+        NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:weakSelf.context];
+        
+        if (completion)
+        {
+            completion(object, nil);
+        }
+    }];
+    
+    [op start];
+}
+
 - (void)selectAll:(Class)entityClass completion:(AHRRDatabaseListBlock)completion
 {
     __weak typeof(self) weakSelf = self;
