@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5658200A1864576500755542 /* AHRRDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 565820091864576500755542 /* AHRRDatabase.m */; };
 		4428C4C5186452A5007FE0CA /* AHRRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428C4C3186452A5007FE0CA /* AHRRLoginViewController.m */; };
 		4428C4C6186452A5007FE0CA /* AHRRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4428C4C4186452A5007FE0CA /* AHRRLoginViewController.xib */; };
 		4428C4CD18645C9B007FE0CA /* AHRRTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428C4CC18645C9B007FE0CA /* AHRRTextFieldCell.m */; };
@@ -27,7 +28,13 @@
 		56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD7A1864458C00D5FCEA /* AHRRHomeViewController.m */; };
 		56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */; };
 		56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD8118644B1800D5FCEA /* AHRRNetwork.m */; };
+		56EDFD8A1864530300D5FCEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD891864530300D5FCEA /* Default-568h@2x.png */; };
+		D65638A11864602200C8AF9E /* AHRRProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = D65638A01864602200C8AF9E /* AHRRProblem.m */; };
+		D65638A41864602200C8AF9E /* AHRRApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D65638A31864602200C8AF9E /* AHRRApplication.m */; };
+		D65638A71864602200C8AF9E /* AHRRConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D65638A61864602200C8AF9E /* AHRRConfiguration.m */; };
+		D6DA19191864528900B85849 /* ahrrbit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6DA19171864528900B85849 /* ahrrbit.xcdatamodeld */; };
 		EDE24A64DB1C46C395109867 /* libPods-ahrrbit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE8320E12D14672BB130B38 /* libPods-ahrrbit.a */; };
+		F058A76F186457F20078964C /* AHRRService.m in Sources */ = {isa = PBXBuildFile; fileRef = F058A76E186457F20078964C /* AHRRService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		565820081864576500755542 /* AHRRDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRDatabase.h; sourceTree = "<group>"; };
+		565820091864576500755542 /* AHRRDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRDatabase.m; sourceTree = "<group>"; };
 		4428C4C2186452A5007FE0CA /* AHRRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRLoginViewController.h; sourceTree = "<group>"; };
 		4428C4C3186452A5007FE0CA /* AHRRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRLoginViewController.m; sourceTree = "<group>"; };
 		4428C4C4186452A5007FE0CA /* AHRRLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHRRLoginViewController.xib; sourceTree = "<group>"; };
@@ -70,8 +79,18 @@
 		56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHRRHomeViewController.xib; sourceTree = "<group>"; };
 		56EDFD8018644B1800D5FCEA /* AHRRNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRNetwork.h; sourceTree = "<group>"; };
 		56EDFD8118644B1800D5FCEA /* AHRRNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRNetwork.m; sourceTree = "<group>"; };
+		56EDFD891864530300D5FCEA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5EE8320E12D14672BB130B38 /* libPods-ahrrbit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ahrrbit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahrrbit.xcconfig"; path = "../Pods/Pods-ahrrbit.xcconfig"; sourceTree = "<group>"; };
+		D656389F1864602200C8AF9E /* AHRRProblem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRProblem.h; sourceTree = "<group>"; };
+		D65638A01864602200C8AF9E /* AHRRProblem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRProblem.m; sourceTree = "<group>"; };
+		D65638A21864602200C8AF9E /* AHRRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRApplication.h; sourceTree = "<group>"; };
+		D65638A31864602200C8AF9E /* AHRRApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRApplication.m; sourceTree = "<group>"; };
+		D65638A51864602200C8AF9E /* AHRRConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRConfiguration.h; sourceTree = "<group>"; };
+		D65638A61864602200C8AF9E /* AHRRConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRConfiguration.m; sourceTree = "<group>"; };
+		D6DA19181864528900B85849 /* ahrrbit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ahrrbit.xcdatamodel; sourceTree = "<group>"; };
+		F058A76D186457F20078964C /* AHRRService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRService.h; sourceTree = "<group>"; };
+		F058A76E186457F20078964C /* AHRRService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		565820071864575400755542 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				565820081864576500755542 /* AHRRDatabase.h */,
+				565820091864576500755542 /* AHRRDatabase.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		4428C4C118645279007FE0CA /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +234,7 @@
 		56EDFD721864455A00D5FCEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				56EDFD87186452A300D5FCEA /* Images */,
 				56EDFD731864455A00D5FCEA /* Languages */,
 			);
 			path = Resources;
@@ -241,6 +270,8 @@
 		56EDFD7E18644ADB00D5FCEA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				565820071864575400755542 /* Database */,
+				F058A76C186457D80078964C /* Service */,
 				56EDFD8318644B2D00D5FCEA /* Cells */,
 				56EDFD7F18644AEF00D5FCEA /* Network */,
 			);
@@ -268,8 +299,40 @@
 		56EDFD8418644B8900D5FCEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D6DA19171864528900B85849 /* ahrrbit.xcdatamodeld */,
+				D65638A51864602200C8AF9E /* AHRRConfiguration.h */,
+				D65638A61864602200C8AF9E /* AHRRConfiguration.m */,
+				D65638A21864602200C8AF9E /* AHRRApplication.h */,
+				D65638A31864602200C8AF9E /* AHRRApplication.m */,
+				D656389F1864602200C8AF9E /* AHRRProblem.h */,
+				D65638A01864602200C8AF9E /* AHRRProblem.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		56EDFD87186452A300D5FCEA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD88186452B800D5FCEA /* App */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		56EDFD88186452B800D5FCEA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD891864530300D5FCEA /* Default-568h@2x.png */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F058A76C186457D80078964C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F058A76D186457F20078964C /* AHRRService.h */,
+				F058A76E186457F20078964C /* AHRRService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +417,7 @@
 				4428C4D5186469DB007FE0CA /* AHRRButtonCell.xib in Resources */,
 				56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */,
 				56EDFD761864455A00D5FCEA /* InfoPlist.strings in Resources */,
+				56EDFD8A1864530300D5FCEA /* Default-568h@2x.png in Resources */,
 				4428C4C6186452A5007FE0CA /* AHRRLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,9 +474,15 @@
 				56EDFD6F1864450E00D5FCEA /* AHRRAppDelegate.m in Sources */,
 				4428C4C5186452A5007FE0CA /* AHRRLoginViewController.m in Sources */,
 				56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */,
+				D65638A71864602200C8AF9E /* AHRRConfiguration.m in Sources */,
+				5658200A1864576500755542 /* AHRRDatabase.m in Sources */,
 				4428C4CD18645C9B007FE0CA /* AHRRTextFieldCell.m in Sources */,
 				4428C4D3186469BA007FE0CA /* AHRRButtonCell.m in Sources */,
 				56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */,
+				D6DA19191864528900B85849 /* ahrrbit.xcdatamodeld in Sources */,
+				D65638A11864602200C8AF9E /* AHRRProblem.m in Sources */,
+				F058A76F186457F20078964C /* AHRRService.m in Sources */,
+				D65638A41864602200C8AF9E /* AHRRApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +601,6 @@
 			baseConfigurationReference = A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ahrrbit/Application/ahrrbit-Prefix.pch";
 				INFOPLIST_FILE = "ahrrbit/Application/ahrrbit-Info.plist";
@@ -545,7 +614,6 @@
 			baseConfigurationReference = A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ahrrbit/Application/ahrrbit-Prefix.pch";
 				INFOPLIST_FILE = "ahrrbit/Application/ahrrbit-Info.plist";
@@ -627,6 +695,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6DA19171864528900B85849 /* ahrrbit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6DA19181864528900B85849 /* ahrrbit.xcdatamodel */,
+			);
+			currentVersion = D6DA19181864528900B85849 /* ahrrbit.xcdatamodel */;
+			path = ahrrbit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 56EDFD2E1864443D00D5FCEA /* Project object */;
 }

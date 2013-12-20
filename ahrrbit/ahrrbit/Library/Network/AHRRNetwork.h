@@ -10,4 +10,7 @@
 
 @interface AHRRNetwork : NSObject
 
+@property (nonatomic, copy) NSString *baseUrl;
+
+- (instancetype)initWithUrl:(NSString*)url;
 @end
