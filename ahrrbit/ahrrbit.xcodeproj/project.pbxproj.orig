@@ -213,9 +213,12 @@
 		56EDFD7E18644ADB00D5FCEA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				565820071864575400755542 /* Database */,
 				56EDFD8B1864564F00D5FCEA /* Service */,
+=======
 				F058A76C186457D80078964C /* Service */,
+>>>>>>> bc3a996cbbc47efacfded87186eff81cd8c3caf4
 				56EDFD8318644B2D00D5FCEA /* Cells */,
 				56EDFD7F18644AEF00D5FCEA /* Network */,
 			);
