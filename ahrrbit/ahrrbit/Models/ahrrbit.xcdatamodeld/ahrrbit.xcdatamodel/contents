@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AHRApplication" representedClassName="AHRApplication" syncable="YES">
+        <attribute name="app_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="app_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="configuration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHRConfiguration" inverseName="applications" inverseEntity="AHRConfiguration" syncable="YES"/>
+        <relationship name="problems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AHRProblem" inverseName="application" inverseEntity="AHRProblem" syncable="YES"/>
+    </entity>
+    <entity name="AHRConfiguration" representedClassName="AHRConfiguration" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="server" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="applications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AHRApplication" inverseName="configuration" inverseEntity="AHRApplication" syncable="YES"/>
+    </entity>
+    <entity name="AHRProblem" representedClassName="AHRProblem" syncable="YES">
+        <attribute name="comments_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="environment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="error_class" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="first_notice_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="hosts" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issue_link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issue_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_deploy_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="last_notice_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messages" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notices_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="resolved" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="resolved_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="user_agents" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="where" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="application" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHRApplication" inverseName="problems" inverseEntity="AHRApplication" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AHRApplication" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AHRConfiguration" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AHRProblem" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
