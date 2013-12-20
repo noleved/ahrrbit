@@ -37,4 +37,9 @@
     }];
 }
 
+- (void)addConfiguration:(AHRConfiguration *)configuration
+{
+    
+}
+
 @end

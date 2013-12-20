@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class AHRProblem;
+@class AHRProblem, AHRConfiguration;
 
 @interface AHRApplication : NSManagedObject
 
 @property (nonatomic, retain) NSString * app_id;
 @property (nonatomic, retain) NSString * app_name;
-@property (nonatomic, retain) NSManagedObject *configuration;
+@property (nonatomic, retain) AHRConfiguration *configuration;
 @property (nonatomic, retain) NSSet *problems;
 @end
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class AHRApplication;
 
 @interface AHRProblem : NSManagedObject
 
@@ -31,6 +32,6 @@
 @property (nonatomic, retain) NSDate * updated_at;
 @property (nonatomic, retain) NSString * user_agents;
 @property (nonatomic, retain) NSString * where;
-@property (nonatomic, retain) NSManagedObject *application;
+@property (nonatomic, retain) AHRApplication *application;
 
 @end
