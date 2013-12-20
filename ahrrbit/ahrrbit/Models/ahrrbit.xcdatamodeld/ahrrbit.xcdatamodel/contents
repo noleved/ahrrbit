@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="AHRApplication" representedClassName="AHRApplication" syncable="YES">
+    <entity name="AHRRApplication" representedClassName="AHRRApplication" syncable="YES">
         <attribute name="app_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="app_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="configuration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHRConfiguration" inverseName="applications" inverseEntity="AHRConfiguration" syncable="YES"/>
-        <relationship name="problems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AHRProblem" inverseName="application" inverseEntity="AHRProblem" syncable="YES"/>
+        <relationship name="configuration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHRRConfiguration" inverseName="applications" inverseEntity="AHRRConfiguration" syncable="YES"/>
+        <relationship name="problems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AHRRProblem" inverseName="application" inverseEntity="AHRRProblem" syncable="YES"/>
     </entity>
-    <entity name="AHRConfiguration" representedClassName="AHRConfiguration" syncable="YES">
+    <entity name="AHRRConfiguration" representedClassName="AHRRConfiguration" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="server" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="applications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AHRApplication" inverseName="configuration" inverseEntity="AHRApplication" syncable="YES"/>
+        <relationship name="applications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AHRRApplication" inverseName="configuration" inverseEntity="AHRRApplication" syncable="YES"/>
     </entity>
-    <entity name="AHRProblem" representedClassName="AHRProblem" syncable="YES">
+    <entity name="AHRRProblem" representedClassName="AHRRProblem" syncable="YES">
         <attribute name="comments_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="environment" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,11 +34,11 @@
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="user_agents" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="where" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="application" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHRApplication" inverseName="problems" inverseEntity="AHRApplication" syncable="YES"/>
+        <relationship name="application" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHRRApplication" inverseName="problems" inverseEntity="AHRRApplication" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AHRApplication" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="AHRConfiguration" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="AHRProblem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AHRRApplication" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AHRRConfiguration" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="AHRRProblem" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

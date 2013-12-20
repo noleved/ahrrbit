@@ -1,5 +1,5 @@
 //
-//  AHRProblem.h
+//  AHRRProblem.h
 //  ahrrbit
 //
 //  Created by Andrea Dal Ponte on 20/12/13.
@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class AHRApplication;
+@class AHRRApplication;
 
-@interface AHRProblem : NSManagedObject
+@interface AHRRProblem : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * comments_count;
 @property (nonatomic, retain) NSDate * created_at;
@@ -32,6 +32,6 @@
 @property (nonatomic, retain) NSDate * updated_at;
 @property (nonatomic, retain) NSString * user_agents;
 @property (nonatomic, retain) NSString * where;
-@property (nonatomic, retain) AHRApplication *application;
+@property (nonatomic, retain) AHRRApplication *application;
 
 @end

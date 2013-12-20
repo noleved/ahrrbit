@@ -1,5 +1,5 @@
 //
-//  AHRConfiguration.h
+//  AHRRConfiguration.h
 //  ahrrbit
 //
 //  Created by Andrea Dal Ponte on 20/12/13.
@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class AHRApplication;
+@class AHRRApplication;
 
-@interface AHRConfiguration : NSManagedObject
+@interface AHRRConfiguration : NSManagedObject
 
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * name;
@@ -21,10 +21,10 @@
 @property (nonatomic, retain) NSSet *applications;
 @end
 
-@interface AHRConfiguration (CoreDataGeneratedAccessors)
+@interface AHRRConfiguration (CoreDataGeneratedAccessors)
 
-- (void)addApplicationsObject:(AHRApplication *)value;
-- (void)removeApplicationsObject:(AHRApplication *)value;
+- (void)addApplicationsObject:(AHRRApplication *)value;
+- (void)removeApplicationsObject:(AHRRApplication *)value;
 - (void)addApplications:(NSSet *)values;
 - (void)removeApplications:(NSSet *)values;
 

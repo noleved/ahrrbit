@@ -1,16 +1,16 @@
 //
-//  AHRConfiguration.m
+//  AHRRConfiguration.m
 //  ahrrbit
 //
 //  Created by Andrea Dal Ponte on 20/12/13.
 //  Copyright (c) 2013 noleved. All rights reserved.
 //
 
-#import "AHRConfiguration.h"
-#import "AHRApplication.h"
+#import "AHRRConfiguration.h"
+#import "AHRRApplication.h"
 
 
-@implementation AHRConfiguration
+@implementation AHRRConfiguration
 
 @dynamic email;
 @dynamic name;
