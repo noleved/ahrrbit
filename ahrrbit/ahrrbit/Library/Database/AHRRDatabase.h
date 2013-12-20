@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+typedef void(^AHRRDatabaseEntityBlock) (NSManagedObject *entity, NSError *error);
 typedef void(^AHRRDatabaseListBlock) (NSArray *elements, NSError *error);
 
 @interface AHRRDatabase : NSObject
@@ -17,6 +18,7 @@ typedef void(^AHRRDatabaseListBlock) (NSArray *elements, NSError *error);
 
 - (instancetype)initWithContext:(NSManagedObjectContext *)context;
 
+- (void)createObject:(Class)enityClass completion:(AHRRDatabaseEntityBlock)completion;
 - (void)selectAll:(Class)entityClass completion:(AHRRDatabaseListBlock)completion;
 
 @end
