@@ -30,8 +30,8 @@
 {
 
     self.inputField.secureTextEntry = [args[@"type"] isEqualToString:@"password" ];
-    self.fieldLabel.text = args[@"name"];
-    
+    self.inputField.placeholder = args[@"name"];
+
 }
 
 -(NSString *)getFieldValue
