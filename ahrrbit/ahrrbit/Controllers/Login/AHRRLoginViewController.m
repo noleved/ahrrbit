@@ -28,9 +28,9 @@
 {
     [super viewDidLoad];
     self.title = @"Avast! Login";
-    
+
     self.cells = [[NSMutableArray alloc] init];
-    
+
     self.fields = @[
                     @{@"name":@"email", @"type":@"text", @"value":@""},
                     @{@"name":@"name", @"type":@"text", @"value":[NSNull null]},
@@ -38,7 +38,7 @@
                     @{@"name":@"server", @"type":@"text", @"value":[NSNull null]},
                     @{@"name":@"token", @"type":@"text", @"value":[NSNull null]}
                     ];
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,22 +56,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     NSDictionary *valueForIndex = self.fields[indexPath.row];
-    
+
     AHRRTextFieldCell *cell = nil;
-    
-    if(self.cells.count <= indexPath.row)
-        
+
+
+    if(self.cells.count <= indexPath.row || nil == self.cells[indexPath.row])
     {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"AHRRTextFieldCell" owner:nil options:nil] firstObject];
         [cell setupWithFieldOptions:valueForIndex];
         [self.cells addObject:cell];
-        
-    }
-    else{
+
+    }else{
         cell = self.cells[indexPath.row];
     }
+
     return cell;
 }
 
