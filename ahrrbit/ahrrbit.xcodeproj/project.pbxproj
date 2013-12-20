@@ -10,15 +10,16 @@
 		56EDFD3A1864443D00D5FCEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD391864443D00D5FCEA /* Foundation.framework */; };
 		56EDFD3C1864443D00D5FCEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3B1864443D00D5FCEA /* CoreGraphics.framework */; };
 		56EDFD3E1864443D00D5FCEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3D1864443D00D5FCEA /* UIKit.framework */; };
-		56EDFD441864443D00D5FCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD421864443D00D5FCEA /* InfoPlist.strings */; };
-		56EDFD461864443D00D5FCEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD451864443D00D5FCEA /* main.m */; };
-		56EDFD4A1864443D00D5FCEA /* AHRRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD491864443D00D5FCEA /* AHRRAppDelegate.m */; };
-		56EDFD4C1864443D00D5FCEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD4B1864443D00D5FCEA /* Images.xcassets */; };
 		56EDFD531864443D00D5FCEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD521864443D00D5FCEA /* XCTest.framework */; };
 		56EDFD541864443D00D5FCEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD391864443D00D5FCEA /* Foundation.framework */; };
 		56EDFD551864443D00D5FCEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3D1864443D00D5FCEA /* UIKit.framework */; };
 		56EDFD5D1864443D00D5FCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD5B1864443D00D5FCEA /* InfoPlist.strings */; };
 		56EDFD5F1864443D00D5FCEA /* ahrrbitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD5E1864443D00D5FCEA /* ahrrbitTests.m */; };
+		56EDFD6F1864450E00D5FCEA /* AHRRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD6B1864450E00D5FCEA /* AHRRAppDelegate.m */; };
+		56EDFD711864450E00D5FCEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD6E1864450E00D5FCEA /* main.m */; };
+		56EDFD761864455A00D5FCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD741864455A00D5FCEA /* InfoPlist.strings */; };
+		56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD7A1864458C00D5FCEA /* AHRRHomeViewController.m */; };
+		56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +37,20 @@
 		56EDFD391864443D00D5FCEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56EDFD3B1864443D00D5FCEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		56EDFD3D1864443D00D5FCEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		56EDFD411864443D00D5FCEA /* ahrrbit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ahrrbit-Info.plist"; sourceTree = "<group>"; };
-		56EDFD431864443D00D5FCEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		56EDFD451864443D00D5FCEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		56EDFD471864443D00D5FCEA /* ahrrbit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ahrrbit-Prefix.pch"; sourceTree = "<group>"; };
-		56EDFD481864443D00D5FCEA /* AHRRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHRRAppDelegate.h; sourceTree = "<group>"; };
-		56EDFD491864443D00D5FCEA /* AHRRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHRRAppDelegate.m; sourceTree = "<group>"; };
-		56EDFD4B1864443D00D5FCEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56EDFD511864443D00D5FCEA /* ahrrbitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ahrrbitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EDFD521864443D00D5FCEA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		56EDFD5A1864443D00D5FCEA /* ahrrbitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ahrrbitTests-Info.plist"; sourceTree = "<group>"; };
 		56EDFD5C1864443D00D5FCEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		56EDFD5E1864443D00D5FCEA /* ahrrbitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ahrrbitTests.m; sourceTree = "<group>"; };
+		56EDFD6A1864450E00D5FCEA /* AHRRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRAppDelegate.h; sourceTree = "<group>"; };
+		56EDFD6B1864450E00D5FCEA /* AHRRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRAppDelegate.m; sourceTree = "<group>"; };
+		56EDFD6C1864450E00D5FCEA /* ahrrbit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ahrrbit-Info.plist"; sourceTree = "<group>"; };
+		56EDFD6D1864450E00D5FCEA /* ahrrbit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ahrrbit-Prefix.pch"; sourceTree = "<group>"; };
+		56EDFD6E1864450E00D5FCEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56EDFD751864455A00D5FCEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56EDFD791864458C00D5FCEA /* AHRRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRHomeViewController.h; sourceTree = "<group>"; };
+		56EDFD7A1864458C00D5FCEA /* AHRRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRHomeViewController.m; sourceTree = "<group>"; };
+		56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHRRHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,23 +110,11 @@
 		56EDFD3F1864443D00D5FCEA /* ahrrbit */ = {
 			isa = PBXGroup;
 			children = (
-				56EDFD481864443D00D5FCEA /* AHRRAppDelegate.h */,
-				56EDFD491864443D00D5FCEA /* AHRRAppDelegate.m */,
-				56EDFD4B1864443D00D5FCEA /* Images.xcassets */,
-				56EDFD401864443D00D5FCEA /* Supporting Files */,
+				56EDFD691864450E00D5FCEA /* Application */,
+				56EDFD771864456D00D5FCEA /* Controllers */,
+				56EDFD721864455A00D5FCEA /* Resources */,
 			);
 			path = ahrrbit;
-			sourceTree = "<group>";
-		};
-		56EDFD401864443D00D5FCEA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				56EDFD411864443D00D5FCEA /* ahrrbit-Info.plist */,
-				56EDFD421864443D00D5FCEA /* InfoPlist.strings */,
-				56EDFD451864443D00D5FCEA /* main.m */,
-				56EDFD471864443D00D5FCEA /* ahrrbit-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		56EDFD581864443D00D5FCEA /* ahrrbitTests */ = {
@@ -142,6 +133,52 @@
 				56EDFD5B1864443D00D5FCEA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56EDFD691864450E00D5FCEA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD6A1864450E00D5FCEA /* AHRRAppDelegate.h */,
+				56EDFD6B1864450E00D5FCEA /* AHRRAppDelegate.m */,
+				56EDFD6C1864450E00D5FCEA /* ahrrbit-Info.plist */,
+				56EDFD6D1864450E00D5FCEA /* ahrrbit-Prefix.pch */,
+				56EDFD6E1864450E00D5FCEA /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		56EDFD721864455A00D5FCEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD731864455A00D5FCEA /* Languages */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		56EDFD731864455A00D5FCEA /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD741864455A00D5FCEA /* InfoPlist.strings */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		56EDFD771864456D00D5FCEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD781864458100D5FCEA /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56EDFD781864458100D5FCEA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD791864458C00D5FCEA /* AHRRHomeViewController.h */,
+				56EDFD7A1864458C00D5FCEA /* AHRRHomeViewController.m */,
+				56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EDFD441864443D00D5FCEA /* InfoPlist.strings in Resources */,
-				56EDFD4C1864443D00D5FCEA /* Images.xcassets in Resources */,
+				56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */,
+				56EDFD761864455A00D5FCEA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EDFD461864443D00D5FCEA /* main.m in Sources */,
-				56EDFD4A1864443D00D5FCEA /* AHRRAppDelegate.m in Sources */,
+				56EDFD711864450E00D5FCEA /* main.m in Sources */,
+				56EDFD6F1864450E00D5FCEA /* AHRRAppDelegate.m in Sources */,
+				56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,18 +302,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		56EDFD421864443D00D5FCEA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56EDFD431864443D00D5FCEA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		56EDFD5B1864443D00D5FCEA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				56EDFD5C1864443D00D5FCEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		56EDFD741864455A00D5FCEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56EDFD751864455A00D5FCEA /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -361,8 +399,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ahrrbit/ahrrbit-Prefix.pch";
-				INFOPLIST_FILE = "ahrrbit/ahrrbit-Info.plist";
+				GCC_PREFIX_HEADER = "ahrrbit/Application/ahrrbit-Prefix.pch";
+				INFOPLIST_FILE = "ahrrbit/Application/ahrrbit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,8 +412,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ahrrbit/ahrrbit-Prefix.pch";
-				INFOPLIST_FILE = "ahrrbit/ahrrbit-Info.plist";
+				GCC_PREFIX_HEADER = "ahrrbit/Application/ahrrbit-Prefix.pch";
+				INFOPLIST_FILE = "ahrrbit/Application/ahrrbit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
