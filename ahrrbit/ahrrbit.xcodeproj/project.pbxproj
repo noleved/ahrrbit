@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5658200A1864576500755542 /* AHRRDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 565820091864576500755542 /* AHRRDatabase.m */; };
 		56EDFD3A1864443D00D5FCEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD391864443D00D5FCEA /* Foundation.framework */; };
 		56EDFD3C1864443D00D5FCEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3B1864443D00D5FCEA /* CoreGraphics.framework */; };
 		56EDFD3E1864443D00D5FCEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3D1864443D00D5FCEA /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		565820081864576500755542 /* AHRRDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRDatabase.h; sourceTree = "<group>"; };
+		565820091864576500755542 /* AHRRDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRDatabase.m; sourceTree = "<group>"; };
 		56EDFD361864443D00D5FCEA /* ahrrbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ahrrbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EDFD391864443D00D5FCEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56EDFD3B1864443D00D5FCEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		565820071864575400755542 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				565820081864576500755542 /* AHRRDatabase.h */,
+				565820091864576500755542 /* AHRRDatabase.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		56EDFD2D1864443D00D5FCEA = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +210,8 @@
 		56EDFD7E18644ADB00D5FCEA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				565820071864575400755542 /* Database */,
+				56EDFD8B1864564F00D5FCEA /* Service */,
 				56EDFD8318644B2D00D5FCEA /* Cells */,
 				56EDFD7F18644AEF00D5FCEA /* Network */,
 			);
@@ -241,6 +255,13 @@
 				56EDFD891864530300D5FCEA /* Default-568h@2x.png */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		56EDFD8B1864564F00D5FCEA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +399,7 @@
 				56EDFD711864450E00D5FCEA /* main.m in Sources */,
 				56EDFD6F1864450E00D5FCEA /* AHRRAppDelegate.m in Sources */,
 				56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */,
+				5658200A1864576500755542 /* AHRRDatabase.m in Sources */,
 				56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
