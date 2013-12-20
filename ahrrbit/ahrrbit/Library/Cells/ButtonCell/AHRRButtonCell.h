@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AHRRButtonCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *fullsizeButton;
+- (IBAction)buttonTouched:(id)sender;
+
+-(void)setupWithField:(NSString *)fieldname;
 
 @end

@@ -26,4 +26,11 @@
     // Configure the view for the selected state
 }
 
+-(void)setupWithField:(NSString *)fieldname
+{
+    [self.fullsizeButton setTitle:fieldname forState:UIControlStateNormal];
+}
+
+- (IBAction)buttonTouched:(id)sender {
+}
 @end
