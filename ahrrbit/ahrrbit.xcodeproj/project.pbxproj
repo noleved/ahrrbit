@@ -21,6 +21,7 @@
 		56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD7A1864458C00D5FCEA /* AHRRHomeViewController.m */; };
 		56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */; };
 		56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EDFD8118644B1800D5FCEA /* AHRRNetwork.m */; };
+		56EDFD8A1864530300D5FCEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56EDFD891864530300D5FCEA /* Default-568h@2x.png */; };
 		EDE24A64DB1C46C395109867 /* libPods-ahrrbit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE8320E12D14672BB130B38 /* libPods-ahrrbit.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		56EDFD7B1864458C00D5FCEA /* AHRRHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHRRHomeViewController.xib; sourceTree = "<group>"; };
 		56EDFD8018644B1800D5FCEA /* AHRRNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRNetwork.h; sourceTree = "<group>"; };
 		56EDFD8118644B1800D5FCEA /* AHRRNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRNetwork.m; sourceTree = "<group>"; };
+		56EDFD891864530300D5FCEA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5EE8320E12D14672BB130B38 /* libPods-ahrrbit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ahrrbit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahrrbit.xcconfig"; path = "../Pods/Pods-ahrrbit.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 		56EDFD721864455A00D5FCEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				56EDFD87186452A300D5FCEA /* Images */,
 				56EDFD731864455A00D5FCEA /* Languages */,
 			);
 			path = Resources;
@@ -222,6 +225,22 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		56EDFD87186452A300D5FCEA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD88186452B800D5FCEA /* App */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		56EDFD88186452B800D5FCEA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				56EDFD891864530300D5FCEA /* Default-568h@2x.png */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +323,7 @@
 			files = (
 				56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */,
 				56EDFD761864455A00D5FCEA /* InfoPlist.strings in Resources */,
+				56EDFD8A1864530300D5FCEA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +497,6 @@
 			baseConfigurationReference = A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ahrrbit/Application/ahrrbit-Prefix.pch";
 				INFOPLIST_FILE = "ahrrbit/Application/ahrrbit-Info.plist";
@@ -491,7 +510,6 @@
 			baseConfigurationReference = A2B30F8E98D94FC2960A7B67 /* Pods-ahrrbit.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ahrrbit/Application/ahrrbit-Prefix.pch";
 				INFOPLIST_FILE = "ahrrbit/Application/ahrrbit-Info.plist";
