@@ -11,5 +11,8 @@
 @interface AHRRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navController;
+
+-(BOOL) isAuthenticated;
 
 @end
