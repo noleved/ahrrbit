@@ -36,7 +36,7 @@
 
 -(NSString *)getFieldValue
 {
-    return self.fieldLabel.text;
+  return self.inputField.text;
 }
 
 @end
