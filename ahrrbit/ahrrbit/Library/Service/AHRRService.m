@@ -7,6 +7,13 @@
 //
 
 #import "AHRRService.h"
+#import "AHRRDatabase.h"
+
+@interface AHRRService ()
+
+@property (nonatomic, strong) AHRRDatabase *database;
+
+@end
 
 @implementation AHRRService
 
@@ -17,6 +24,17 @@
         
     }
     return self;
+}
+
+- (void)getApplications:(AHRRServiceListBlock)completion
+{
+    [self.database selectAll:nil completion:^(NSArray *elements, NSError *error)
+    {
+         if (completion)
+         {
+             completion(elements, error);
+         }
+    }];
 }
 
 @end

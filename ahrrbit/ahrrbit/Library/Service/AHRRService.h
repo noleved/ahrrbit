@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^AHRRServiceListBlock)(NSArray *elements, NSError *error);
+
 @interface AHRRService : NSObject
 
 @property (nonatomic, copy) NSString *baseUrl;
 
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl modelName:(NSString *)modelName;
+
+- (void)getApplications:(AHRRServiceListBlock)completion;
 
 @end

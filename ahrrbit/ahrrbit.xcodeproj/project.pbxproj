@@ -214,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				565820071864575400755542 /* Database */,
-				56EDFD8B1864564F00D5FCEA /* Service */,
 				F058A76C186457D80078964C /* Service */,
 				56EDFD8318644B2D00D5FCEA /* Cells */,
 				56EDFD7F18644AEF00D5FCEA /* Network */,
@@ -245,15 +244,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F058A76C186457D80078964C /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				F058A76D186457F20078964C /* AHRRService.h */,
-				F058A76E186457F20078964C /* AHRRService.m */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		56EDFD87186452A300D5FCEA /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,9 +260,11 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		56EDFD8B1864564F00D5FCEA /* Service */ = {
+		F058A76C186457D80078964C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F058A76D186457F20078964C /* AHRRService.h */,
+				F058A76E186457F20078964C /* AHRRService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
