@@ -12,7 +12,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *fieldLabel;
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 
--(void)setupWithField:(NSString *)fieldname secure:(BOOL)secure;
+-(void)setupWithFieldOptions:(NSDictionary *)args;
+
 -(NSString *) getFieldValue;
 
 @end

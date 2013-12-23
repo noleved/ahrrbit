@@ -11,7 +11,13 @@
 
 @interface AHRRLoginViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic,strong)  NSArray *fieldNames;
-@property (nonatomic, strong) AHRRService *service;
+@property (nonatomic, strong)  NSArray *fieldNames;
+@property (nonatomic, strong)  AHRRService *service;
+@property (nonatomic, strong)  NSArray* fields;
+@property (nonatomic, strong)  NSMutableArray* cells;
+
+
+- (BOOL)saveCredential;
+- (IBAction)buttonTouched:(id)sender;
 
 @end

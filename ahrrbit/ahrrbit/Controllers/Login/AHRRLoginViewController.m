@@ -29,6 +29,17 @@
 {
     [super viewDidLoad];
     self.title = @"Avast! Login";
+
+    self.cells = [[NSMutableArray alloc] init];
+
+    self.fields = @[
+                    @{@"name":@"email", @"type":@"text", @"value":@""},
+                    @{@"name":@"name", @"type":@"text", @"value":[NSNull null]},
+                    @{@"name":@"password", @"type":@"password", @"value":[NSNull null]},
+                    @{@"name":@"server", @"type":@"text", @"value":[NSNull null]},
+                    @{@"name":@"token", @"type":@"text", @"value":[NSNull null]}
+                    ];
+
     self.fieldNames = @[@"login", @"password", @"host", @"authKey"];
     
     // deep magic start here...
@@ -51,21 +62,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.fieldNames.count;
+    return self.fields.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *valueForIndex= self.fieldNames[indexPath.row];
-    AHRRTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"text"];
-    if (nil ==  cell) {
+
+    NSDictionary *valueForIndex = self.fields[indexPath.row];
+
+    AHRRTextFieldCell *cell = nil;
+
+
+    if(self.cells.count <= indexPath.row || nil == self.cells[indexPath.row])
+    {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"AHRRTextFieldCell" owner:nil options:nil] firstObject];
+        [cell setupWithFieldOptions:valueForIndex];
+        [self.cells addObject:cell];
+
+    }else{
+        cell = self.cells[indexPath.row];
     }
-    
-    BOOL secure = [valueForIndex isEqualToString:@"password"];
-    
-    [cell setupWithField:valueForIndex secure:secure];
-    
+
     return cell;
 }
 
@@ -76,9 +93,25 @@
     return 45.0f;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 100.0f;
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 100.0f;
+//}
+
+- (void)readCredential{
+
+}
+
+- (BOOL)saveCredential{
+    for (int i = 0; i<self.fields.count; i++) {
+        NSLog(@"%@", [self.cells[i] getFieldValue]);
+    }
+    return YES;
+}
+
+- (IBAction)buttonTouched:(id)sender {
+    NSLog(@"%@",@"touch");
+    [self saveCredential];
 }
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
