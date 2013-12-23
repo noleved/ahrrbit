@@ -8,6 +8,7 @@
 
 #import "AHRRLoginViewController.h"
 #import "AHRRTextFieldCell.h"
+#import "AHRRService.h"
 
 @interface AHRRLoginViewController ()
 
@@ -30,6 +31,14 @@
     self.title = @"Avast! Login";
     self.fieldNames = @[@"login", @"password", @"host", @"authKey"];
     
+    // deep magic start here...
+    self.service = [[AHRRService alloc] initWithBaseUrl:@"http://noleved-errbit.herokuapp.com/api/v1/" modelName:@"AHRRProblem"];
+    [self.service fetchRemoteProblems:^(id elements, NSError *error) {
+        if (nil == error)
+        {
+            NSLog(@"elements: %@", elements);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning

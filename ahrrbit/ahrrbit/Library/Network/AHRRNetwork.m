@@ -57,6 +57,10 @@
 {
     RKObjectManager *manager = [RKObjectManager sharedManager];
     
+    
+//    NSString *token = [NSString stringWithFormat:@"Token token=%@", @"secret_token..."];
+//    [manager.HTTPClient setDefaultHeader:@"HTTP_AUTHORIZATION" value:token];
+    
     // Mapping Resource Problem
     RKObjectMapping *problemMapping = [RKObjectMapping mappingForClass:[AHRRProblem class]];
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"comments_count"   toKeyPath:@"comments_count"]];
@@ -83,13 +87,10 @@
     RKResponseDescriptor *problemsResponse = [RKResponseDescriptor responseDescriptorWithMapping:problemMapping
                                                                                           method:RKRequestMethodGET
                                                                                      pathPattern:@"problems"
-                                                                                         keyPath:@""
-                                                                                     statusCodes:nil];
+                                                                                         keyPath:nil
+                                                                                     statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     [manager addResponseDescriptor:problemsResponse];
     
-    // Routing
-    RKRoute *companiesRouteGet = [RKRoute routeWithClass:[AHRRProblem class] pathPattern:@"problems" method:RKRequestMethodGET];
-    [manager.router.routeSet addRoute:companiesRouteGet];
     
 }
 
@@ -98,7 +99,10 @@
 - (void)problems:(RKDNetworkingProblemsBlock)completion
 {
     
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"Company" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+    NSDictionary *queryParams = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 @"secret_token...", @"auth_token", nil];
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"problems" parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
     {
         completion(mappingResult.array, nil);
     }

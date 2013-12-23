@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHRRService.h"
 
 @interface AHRRLoginViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic,strong)NSArray* fieldNames;
 
+@property (nonatomic,strong)  NSArray *fieldNames;
+@property (nonatomic, strong) AHRRService *service;
 
 @end

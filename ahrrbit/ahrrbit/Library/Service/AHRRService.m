@@ -8,6 +8,7 @@
 
 #import "AHRRService.h"
 #import "AHRRDatabase.h"
+#import "AHRRNetwork.h"
 
 @interface AHRRService ()
 
@@ -17,14 +18,18 @@
 
 @implementation AHRRService
 
+# pragma mark - Init methods
+
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl modelName:(NSString *)modelName
 {
     if (self = [super init]) {
         self.baseUrl = baseUrl;
-        
+        self.network = [[AHRRNetwork alloc] initWithUrl:self.baseUrl];
     }
     return self;
 }
+
+# pragma mark - Database methods
 
 - (void)getApplications:(AHRRServiceListBlock)completion
 {
@@ -44,6 +49,18 @@
         if (completion)
         {
             completion(entity, error);
+        }
+    }];
+}
+
+# pragma mark - Network methods
+
+- (void)fetchRemoteProblems:(AHRRServiceListBlock)completion;
+{
+    [self.network problems:^(NSArray *elements, NSError *error) {
+        if (completion)
+        {
+            completion(elements, error);
         }
     }];
 }
