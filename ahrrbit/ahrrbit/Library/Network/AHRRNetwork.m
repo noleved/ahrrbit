@@ -8,6 +8,7 @@
 
 #import "AHRRNetwork.h"
 #import "AHRRProblem.h"
+#import "AHRRApplication.h"
 
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
@@ -92,8 +93,16 @@
 //    NSString *token = [NSString stringWithFormat:@"Token token=%@", @"secret_token..."];
 //    [manager.HTTPClient setDefaultHeader:@"HTTP_AUTHORIZATION" value:token];
     
+    RKEntityMapping *appMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([AHRRApplication class])  inManagedObjectStore:manager.managedObjectStore];
+    [appMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"app_name"   toKeyPath:@"app_name"]];
+    [appMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"app_id"   toKeyPath:@"app_id"]];
+   [appMapping setIdentificationAttributes:@[ @"app_id" ]];
+    
     // Mapping Resource Problem
-    RKObjectMapping *problemMapping = [RKObjectMapping mappingForClass:[AHRRProblem class]];
+    RKEntityMapping *problemMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([AHRRProblem class]) inManagedObjectStore:manager.managedObjectStore];
+    
+    [problemMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:nil toKeyPath:@"application" withMapping:appMapping]];
+    
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"comments_count"   toKeyPath:@"comments_count"]];
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"created_at"       toKeyPath:@"created_at"]];
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"environment"      toKeyPath:@"environment"]];
@@ -113,6 +122,7 @@
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"updated_at"       toKeyPath:@"updated_at"]];
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"user_agents"      toKeyPath:@"user_agents"]];
     [problemMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"where"            toKeyPath:@"where"]];
+    [problemMapping setIdentificationAttributes:@[ @"identifier" ]];
 
     // Mapping Responce Problem
     RKResponseDescriptor *problemsResponse = [RKResponseDescriptor responseDescriptorWithMapping:problemMapping

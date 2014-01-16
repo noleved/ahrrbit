@@ -9,6 +9,7 @@
 #import "AHRRService.h"
 #import "AHRRDatabase.h"
 #import "AHRRNetwork.h"
+#import "AHRRApplication.h"
 
 @interface AHRRService ()
 
@@ -30,11 +31,6 @@
     return self;
 }
 
-- (void)sync:(AHRRServiceListBlock)completion
-{
-    // chiamare restkit
-}
-
 - (void)createObject:(Class)objectClass completion:(AHRRServiceEntityBlock)completion
 {
     [self.database createObject:objectClass completion:^(NSManagedObject *entity, NSError *error)
@@ -48,13 +44,24 @@
 
 - (void)getApplications:(AHRRServiceListBlock)completion
 {
-    [self.database selectAll:nil completion:^(NSArray *elements, NSError *error)
+    [self.database selectAll:[AHRRApplication class] completion:^(NSArray *elements, NSError *error)
     {
          if (completion)
          {
              completion(elements, error);
          }
     }];
+}
+
+- (void)getProblems:(AHRRServiceListBlock)completion
+{
+    [self.database selectAll:[AHRRProblem class] completion:^(NSArray *elements, NSError *error)
+     {
+         if (completion)
+         {
+             completion(elements, error);
+         }
+     }];
 }
 
 - (void)addConfiguration:(AHRRConfiguration *)configuration completion:(AHRRServiceEntityBlock)completion
@@ -68,11 +75,12 @@
     }];
 }
 
-# pragma mark - Network methods
+#pragma mark - Network methods
 
-- (void)fetchRemoteProblems:(AHRRServiceListBlock)completion;
+- (void)sync:(AHRRServiceListBlock)completion
 {
-    [self.network problems:^(NSArray *elements, NSError *error) {
+    [self.network problems:^(NSArray *elements, NSError *error)
+    {
         if (completion)
         {
             completion(elements, error);

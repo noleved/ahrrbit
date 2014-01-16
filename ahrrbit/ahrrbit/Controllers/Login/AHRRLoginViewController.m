@@ -36,38 +36,29 @@
                     @{@"name":@"token", @"type":@"text", @"value":[NSNull null]}
                     ];
 
-    self.fieldNames = @[@"login", @"password", @"host", @"authKey"];
+    self.fieldNames = @[ @"login", @"password", @"host", @"authKey" ];
     
     // deep magic start here...
     self.service = [[AHRRService alloc] initWithBaseUrl:@"http://noleved-errbit.herokuapp.com/api/v1/" modelName:@"AHRRProblem"];
     
-    [self.service fetchRemoteProblems:^(id elements, NSError *error)
-    {
-        if (nil == error)
-        {
-            NSLog(@"elements: %@", elements);
-        }
-    }];
+//    __weak typeof(self) weakSelf = self;
     
-    __weak typeof(self) weakSelf = self;
-    
-    [self.service createObject:[AHRRConfiguration class] completion:^(id entity, NSError *error)
-    {
-        self.conf = entity;
-    }];
+//    [self.service createObject:[AHRRConfiguration class] completion:^(id entity, NSError *error)
+//    {
+//        weakSelf.conf = entity;
+//    }];
     
     NSString *cellName = NSStringFromClass([AHRRTextFieldCell class]);
     
     [self.tableView registerNib:[UINib nibWithNibName:cellName bundle:nil] forCellReuseIdentifier:cellName];
+    
+    
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-# pragma mark - UITableViewDataSource
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -89,11 +80,6 @@
 {
     return 45.0f;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 100.0f;
-//}
 
 - (void)readCredential{
 

@@ -22,11 +22,14 @@
 {
     [super viewDidLoad];
     
-    self.service = [[AHRRService alloc] init];
+    self.service = [[AHRRService alloc] initWithBaseUrl:@"http://noleved-errbit.herokuapp.com/api/v1/" modelName:@"AHRRProblem"];
     
     [self.service sync:^(NSArray *elements, NSError *error)
     {
-        
+        [self.service getApplications:^(NSArray *elements, NSError *error)
+        {
+            NSLog(@"app: %@", elements);
+        }];
     }];
 }
 

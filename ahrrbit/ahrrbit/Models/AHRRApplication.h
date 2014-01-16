@@ -13,10 +13,10 @@
 
 @interface AHRRApplication : NSManagedObject
 
-@property (nonatomic, retain) NSString * app_id;
-@property (nonatomic, retain) NSString * app_name;
-@property (nonatomic, retain) AHRRConfiguration *configuration;
-@property (nonatomic, retain) NSSet *problems;
+@property (nonatomic, copy) NSString * app_id;
+@property (nonatomic, copy) NSString * app_name;
+@property (nonatomic, strong) AHRRConfiguration *configuration;
+@property (nonatomic, strong) NSSet *problems;
 @end
 
 @interface AHRRApplication (CoreDataGeneratedAccessors)

@@ -23,9 +23,8 @@ typedef void(^AHRRServiceListBlock)(NSArray *elements, NSError *error);
 
 - (void)sync:(AHRRServiceListBlock)completion;
 - (void)getApplications:(AHRRServiceListBlock)completion;
+- (void)getProblems:(AHRRServiceListBlock)completion;
 - (void)addConfiguration:(AHRRConfiguration *)configuration completion:(AHRRServiceEntityBlock)completion;
 - (void)createObject:(Class)objectClass completion:(AHRRServiceEntityBlock)completion;
-
-- (void)fetchRemoteProblems:(AHRRServiceListBlock)completion;
 
 @end
