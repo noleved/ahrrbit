@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5658200A1864576500755542 /* AHRRDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 565820091864576500755542 /* AHRRDatabase.m */; };
+		4428C4C5186452A5007FE0CA /* AHRRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428C4C3186452A5007FE0CA /* AHRRLoginViewController.m */; };
+		4428C4C6186452A5007FE0CA /* AHRRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4428C4C4186452A5007FE0CA /* AHRRLoginViewController.xib */; };
+		4428C4CD18645C9B007FE0CA /* AHRRTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428C4CC18645C9B007FE0CA /* AHRRTextFieldCell.m */; };
+		4428C4CF18645CC0007FE0CA /* AHRRTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4428C4CE18645CC0007FE0CA /* AHRRTextFieldCell.xib */; };
+		4428C4D3186469BA007FE0CA /* AHRRButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4428C4D2186469BA007FE0CA /* AHRRButtonCell.m */; };
+		4428C4D5186469DB007FE0CA /* AHRRButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4428C4D4186469DB007FE0CA /* AHRRButtonCell.xib */; };
 		56EDFD3A1864443D00D5FCEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD391864443D00D5FCEA /* Foundation.framework */; };
 		56EDFD3C1864443D00D5FCEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3B1864443D00D5FCEA /* CoreGraphics.framework */; };
 		56EDFD3E1864443D00D5FCEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EDFD3D1864443D00D5FCEA /* UIKit.framework */; };
@@ -44,6 +50,15 @@
 /* Begin PBXFileReference section */
 		565820081864576500755542 /* AHRRDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRDatabase.h; sourceTree = "<group>"; };
 		565820091864576500755542 /* AHRRDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRDatabase.m; sourceTree = "<group>"; };
+		4428C4C2186452A5007FE0CA /* AHRRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRLoginViewController.h; sourceTree = "<group>"; };
+		4428C4C3186452A5007FE0CA /* AHRRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRLoginViewController.m; sourceTree = "<group>"; };
+		4428C4C4186452A5007FE0CA /* AHRRLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHRRLoginViewController.xib; sourceTree = "<group>"; };
+		4428C4CB18645C9B007FE0CA /* AHRRTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHRRTextFieldCell.h; sourceTree = "<group>"; };
+		4428C4CC18645C9B007FE0CA /* AHRRTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHRRTextFieldCell.m; sourceTree = "<group>"; };
+		4428C4CE18645CC0007FE0CA /* AHRRTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHRRTextFieldCell.xib; sourceTree = "<group>"; };
+		4428C4D1186469BA007FE0CA /* AHRRButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHRRButtonCell.h; path = ButtonCell/AHRRButtonCell.h; sourceTree = "<group>"; };
+		4428C4D2186469BA007FE0CA /* AHRRButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHRRButtonCell.m; path = ButtonCell/AHRRButtonCell.m; sourceTree = "<group>"; };
+		4428C4D4186469DB007FE0CA /* AHRRButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AHRRButtonCell.xib; path = ButtonCell/AHRRButtonCell.xib; sourceTree = "<group>"; };
 		56EDFD361864443D00D5FCEA /* ahrrbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ahrrbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EDFD391864443D00D5FCEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56EDFD3B1864443D00D5FCEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +125,36 @@
 				565820091864576500755542 /* AHRRDatabase.m */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		4428C4C118645279007FE0CA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4428C4C2186452A5007FE0CA /* AHRRLoginViewController.h */,
+				4428C4C3186452A5007FE0CA /* AHRRLoginViewController.m */,
+				4428C4C4186452A5007FE0CA /* AHRRLoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4428C4C718645BFA007FE0CA /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				4428C4CB18645C9B007FE0CA /* AHRRTextFieldCell.h */,
+				4428C4CC18645C9B007FE0CA /* AHRRTextFieldCell.m */,
+				4428C4CE18645CC0007FE0CA /* AHRRTextFieldCell.xib */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		4428C4D018646999007FE0CA /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				4428C4D1186469BA007FE0CA /* AHRRButtonCell.h */,
+				4428C4D2186469BA007FE0CA /* AHRRButtonCell.m */,
+				4428C4D4186469DB007FE0CA /* AHRRButtonCell.xib */,
+			);
+			name = ButtonCell;
 			sourceTree = "<group>";
 		};
 		56EDFD2D1864443D00D5FCEA = {
@@ -206,6 +251,7 @@
 		56EDFD771864456D00D5FCEA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4428C4C118645279007FE0CA /* Login */,
 				56EDFD781864458100D5FCEA /* Home */,
 			);
 			path = Controllers;
@@ -244,6 +290,8 @@
 		56EDFD8318644B2D00D5FCEA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4428C4D018646999007FE0CA /* ButtonCell */,
+				4428C4C718645BFA007FE0CA /* TextFieldCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -365,9 +413,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4428C4CF18645CC0007FE0CA /* AHRRTextFieldCell.xib in Resources */,
+				4428C4D5186469DB007FE0CA /* AHRRButtonCell.xib in Resources */,
 				56EDFD7D1864458C00D5FCEA /* AHRRHomeViewController.xib in Resources */,
 				56EDFD761864455A00D5FCEA /* InfoPlist.strings in Resources */,
 				56EDFD8A1864530300D5FCEA /* Default-568h@2x.png in Resources */,
+				4428C4C6186452A5007FE0CA /* AHRRLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,9 +472,12 @@
 			files = (
 				56EDFD711864450E00D5FCEA /* main.m in Sources */,
 				56EDFD6F1864450E00D5FCEA /* AHRRAppDelegate.m in Sources */,
+				4428C4C5186452A5007FE0CA /* AHRRLoginViewController.m in Sources */,
 				56EDFD7C1864458C00D5FCEA /* AHRRHomeViewController.m in Sources */,
 				D65638A71864602200C8AF9E /* AHRRConfiguration.m in Sources */,
 				5658200A1864576500755542 /* AHRRDatabase.m in Sources */,
+				4428C4CD18645C9B007FE0CA /* AHRRTextFieldCell.m in Sources */,
+				4428C4D3186469BA007FE0CA /* AHRRButtonCell.m in Sources */,
 				56EDFD8218644B1800D5FCEA /* AHRRNetwork.m in Sources */,
 				D6DA19191864528900B85849 /* ahrrbit.xcdatamodeld in Sources */,
 				D65638A11864602200C8AF9E /* AHRRProblem.m in Sources */,

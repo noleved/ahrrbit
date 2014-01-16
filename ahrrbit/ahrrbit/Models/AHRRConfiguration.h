@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSString * server;
 @property (nonatomic, retain) NSString * token;
 @property (nonatomic, retain) NSSet *applications;
+
 @end
 
 @interface AHRRConfiguration (CoreDataGeneratedAccessors)

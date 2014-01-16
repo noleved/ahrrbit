@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AHRRProblem.h"
+
+typedef void(^RKDNetworkingProblemsBlock)(NSArray *elements, NSError *error);
 
 @interface AHRRNetwork : NSObject
 
 @property (nonatomic, copy) NSString *baseUrl;
+@property (nonatomic, strong) NSManagedObjectContext *context;
 
 - (instancetype)initWithUrl:(NSString*)url;
+- (void)problems:(RKDNetworkingProblemsBlock)completion;
+
 @end
