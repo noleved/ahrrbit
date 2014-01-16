@@ -26,6 +26,11 @@
     return self;
 }
 
+- (void)sync:(AHRRServiceListBlock)completion
+{
+    // chiamare restkit
+}
+
 - (void)getApplications:(AHRRServiceListBlock)completion
 {
     [self.database selectAll:nil completion:^(NSArray *elements, NSError *error)

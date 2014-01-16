@@ -251,11 +251,11 @@
 		56EDFD8418644B8900D5FCEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D65638A21864602200C8AF9E /* AHRRApplication.h */,
+				D65638A31864602200C8AF9E /* AHRRApplication.m */,
 				D6DA19171864528900B85849 /* ahrrbit.xcdatamodeld */,
 				D65638A51864602200C8AF9E /* AHRRConfiguration.h */,
 				D65638A61864602200C8AF9E /* AHRRConfiguration.m */,
-				D65638A21864602200C8AF9E /* AHRRApplication.h */,
-				D65638A31864602200C8AF9E /* AHRRApplication.m */,
 				D656389F1864602200C8AF9E /* AHRRProblem.h */,
 				D65638A01864602200C8AF9E /* AHRRProblem.m */,
 			);

@@ -19,6 +19,7 @@ typedef void(^AHRRServiceListBlock)(NSArray *elements, NSError *error);
 
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl modelName:(NSString *)modelName;
 
+- (void)sync:(AHRRServiceListBlock)completion;
 - (void)getApplications:(AHRRServiceListBlock)completion;
 - (void)addConfiguration:(AHRRConfiguration *)configuration completion:(AHRRServiceEntityBlock)completion;
 
