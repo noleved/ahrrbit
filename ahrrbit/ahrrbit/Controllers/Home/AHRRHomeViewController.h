@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AHRRHomeViewController : UIViewController
+@interface AHRRHomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

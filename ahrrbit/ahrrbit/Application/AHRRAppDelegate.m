@@ -58,7 +58,7 @@
 }
 
 -(BOOL)isAuthenticated {
-    return NO;
+    return YES;
 }
 
 
