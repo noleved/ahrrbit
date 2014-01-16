@@ -100,7 +100,7 @@
 {
     
     NSDictionary *queryParams = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 @"secret_token...", @"auth_token", nil];
+                                 @"6ioP9R9tzX2hafks5ghf", @"auth_token", nil];
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"problems" parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
     {
